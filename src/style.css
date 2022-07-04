@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "Alienator";
+  src: url(../static/fonts/Alienator.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 20;
+}
+
+.loadingScreen #loadingBar {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+html {
+  background: #1e1a20;
+  display: -ms-grid;
+  display: grid;
+  font-family: "Open Sans", sans-serif;
+}
+
+html h1 {
+  font-size: 7vmin;
+}
+
+html h2 {
+  font-size: 5vmin;
+}
+
+html h3 {
+  font-size: 3vmin;
+}
+
+html h4 {
+  font-size: 1.5vmin;
+}
+
+html p {
+  font-size: 2.5vmin;
+}
+
+html .title {
+  font-family: "Alienator";
+}
+
+.menu-background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+}
+
+.closeButton {
+  position: fixed;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+  font-size: 4vmin;
+}
+
+.menuButton_container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  z-index: 10;
+  margin-left: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menuButton_container .menuButton {
+  z-index: 10;
+  color: white;
+  font-size: 4vmin;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuButton_container .menuButton:hover {
+  color: #ffc300;
+}
+
+.menuButton_container:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2b2b2b;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  z-index: 9;
+}
+
+nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  font-size: 15vmin;
+  z-index: 6;
+}
+
+nav .menu ul li {
+  cursor: pointer;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  position: relative;
+  color: #ffeded;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.sideContactIcons {
+  position: fixed;
+  right: -100%;
+  bottom: 3%;
+  margin-top: 30px;
+  border: solid 3px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideContactIcons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideContactIcons img {
+  margin: 3px;
+  width: 45px;
+}
+
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.header .header_title {
+  margin-bottom: 30px;
+}
+
+.header .contactIcons {
+  margin-top: 30px;
+  border: solid 3px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .contactIcons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .contactIcons img {
+  margin: 3px;
+  width: 45px;
+}
+
+.bodySection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.bodySection .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bodySection .content h2 {
+  margin-bottom: 30px;
+}
+
+.projectsSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectsSection .projectsList {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  width: 100%;
+  -ms-grid-columns: (300px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 300px);
+  margin-top: 100px;
+}
+
+.projectsSection .projectsList .projectItem {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-size: cover;
+  padding: 40px;
+  background-color: #2b2b2b;
+}
+
+.projectsSection .projectsList .projectItem > * {
+  z-index: 2;
+}
+
+.projectsSection .projectsList .projectItem:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.projectsSection .projectsList .projectItem .logosProjectItem {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projectsSection .projectsList .projectItem .logosProjectItem img {
+  height: 3rem;
+}
+
+.projectsSection .projectsList .projectItem .githubEyeIcon {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.projectsSection .projectsList .projectItem .githubEyeIcon img {
+  height: 3rem;
+}
+
+.projectsSection .projectsList .projectItem h3 {
+  font-size: 1.3em;
+}
+
+.contactMeSection {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.contactMeSection .contactMeIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactMeSection .contactMeIcons .contactMeIconsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactMeSection .contactMeIcons .contactMeIconsContainer .contactMeIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 100px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.contactMeSection .contactMeIcons .contactMeIconsContainer .contactMeIcon img {
+  width: 50px;
+}
+
+.animationButton {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  html {
+    background: #1e1a20;
+    display: -ms-grid;
+    display: grid;
+    font-family: "Open Sans", sans-serif;
+  }
+  html h1 {
+    font-size: 15vmin;
+  }
+  html h2 {
+    font-size: 10vmin;
+  }
+  html h3 {
+    font-size: 7vmin;
+  }
+  html h4 {
+    font-size: 4.5vmin;
+  }
+  html p {
+    font-size: 5.5vmin;
+  }
+  html .title {
+    font-family: "Alienator";
+  }
+  .bodySection {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .contactMeSection {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menuButton_container {
+    top: 5%;
+  }
+  .menuButton_container .menuButton {
+    font-size: 20px;
+  }
+  .projectsSection {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
