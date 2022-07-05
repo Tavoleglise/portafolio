@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { FontLoader } from "three/examples/jsm/loaders/fontLoader";
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 
 export default class Text3d {
